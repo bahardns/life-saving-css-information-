@@ -1,0 +1,230 @@
+<html>
+  <head>
+    <title>flexbox kullanımı</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      .flex-contanier {
+        display: flex;
+        background-color: pink;
+      }
+      .flex-contanier > div {
+        background-color: greenyellow;
+        margin: 10px;
+        padding: 10px;
+        width: 200px;
+        height: 100px;
+      }
+      .flex-column {
+        display: flex;
+        flex-direction: column;
+        background-color: pink;
+      }
+
+      .flex-column > div {
+        background-color: greenyellow;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+        color: darkblue;
+      }
+
+      .flex-reverse {
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: pink;
+      }
+
+      .flex-reverse > div {
+        background-color: greenyellow;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+      }
+      .flex-row {
+        display: flex;
+        flex-direction: row;
+        background-color: pink;
+      }
+
+      .flex-row > div {
+        background-color: #f1f1f1;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+      }
+
+      .flex-rowReverse {
+        display: flex;
+        flex-direction: row-reverse;
+        background-color: pink;
+      }
+
+      .flex-rowReverse > div {
+        background-color: #f1f1f1;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+      }
+
+      .flex-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: pink;
+      }
+
+      .flex-wrap > div {
+        background-color: #f1f1f1;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+      }
+
+      .flex-noWrap {
+        display: flex;
+        flex-wrap: nowrap;
+        background-color: pink;
+      }
+
+      .flex-noWrap > div {
+        background-color: #f1f1f1;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+      }
+
+      .flex-wrapReverse {
+        display: flex;
+        flex-wrap: wrap-reverse;
+        background-color: pink;
+        }
+
+        .flex-wrapReverse > div {
+        background-color: #f1f1f1;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+        }
+    </style>
+  </head>
+  <body>
+    <!--flexbox ile  float yada position kullanmadan esnek, duyarlı tasarım yapmayı kolaylaştırır.-->
+
+    <div class="flex-contanier">
+      <div>div 1</div>
+      <div>div 2</div>
+      <div>div 3</div>
+    </div>
+    <!-- flex container (parent element -contanier-) -->
+
+    <!-- container pembe alan  üç esnek öğeye sahip olan kapsayıcı alandır-->
+
+    <!-- flex direction özelliği: container da bulunan öğeleri hangi yönde istifleme yapmak istediğni tanımlar-->
+    <p>column özelliği ile öğeleri yukarıdan aşağıya doğru hizalar.</p>
+    <div class="flex-column">
+      <div>div 1</div>
+      <div>div 2</div>
+      <div>div 3</div>
+    </div>
+    <p>column reverse dikey olarak aşağıdan yukarıya doğru hizalama yapar.</p>
+    <div class="flex-reverse">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <p>row değeri soldan sağa yatay olarak öğeleri hizalar.</p>
+    <div class="flex-row">
+      <div>div 1</div>
+      <div>div 2</div>
+      <div>div 3</div>
+    </div>
+
+    <p class="flex-rowReverse">
+      row değeri sağdan sola yatay olarak öğeleri hizalar.
+    </p>
+
+    <div class="flex-rowReverse">
+      <div>div 1</div>
+      <div>div 2</div>
+      <div>div 3</div>
+    </div>
+
+    <h3>flex wrap</h3>
+    <p>flex-wrap özelliği, esnek öğelerin sarılıp sarılmayacağını belirtir.</p>
+    <p>
+      Aşağıdaki örnekler, flex wrap özelliğini daha iyi göstermek için 12 esnek
+      öğeye sahiptir.
+    </p>
+    <h2>
+      örnekete; wrap değeri, gerekirse esnek öğelerin sarılacağını belirtir;
+    </h2>
+    <div class="flex-wrap">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+
+    <h2>NOWRAP</h2>
+    <p>
+      Nowrap değeri, flex öğelerinin kaydırılmayacağını belirtir (bu
+      varsayılandır):
+    </p>
+
+    <div class="flex-noWrap">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+        <h3> wrap reverse</h3>
+        <p> wrap reverse değeri, gerektiğinde flex öğelerin ters sırada sarılacağını belirtir:</p>
+    <div class="flex-wrapReverse">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+      </div>
+   
+
+  </body>
+</html>
